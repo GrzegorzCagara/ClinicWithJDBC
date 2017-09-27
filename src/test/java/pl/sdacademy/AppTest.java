@@ -93,7 +93,8 @@ public class AppTest extends TestCase {
         Patient patient = new Patient("Steve", "Irwin", "Płaska", "płaszczka", "Niekontrolowane ruchy ogonem");
         Doctor doctor = new Doctor("Marian", "Pazdzioch", "Neurolog");
         dao.insertPatient(patient);
-        patient = dao.findPatientById(1);
+        List<Patient> patients = dao.findAll();
+        patient = patients.get(0);
         dao.insertDoctor(doctor);
         doctor = dao.findDoctorByName("Pazdzioch");
         Appointment appointment = new Appointment(patient.getId(), doctor.getId());

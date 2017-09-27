@@ -6,11 +6,11 @@ public class StatementBuilder {
         StringBuilder sb = new StringBuilder();
         sb.append("CREATE TABLE clinic.patient ( ");
         sb.append("id SERIAL PRIMARY KEY,");
-        sb.append("name character(20) NOT NULL,");
-        sb.append("lastname character(20) NOT NULL,");
-        sb.append("petname character(20) NOT NULL,");
-        sb.append("petspecies character(20) NOT NULL,");
-        sb.append("illness character(100) NOT NULL);");
+        sb.append("name character varying(20) NOT NULL,");
+        sb.append("lastname character varying(20) NOT NULL,");
+        sb.append("petname character varying(20) NOT NULL,");
+        sb.append("petspecies character varying(20) NOT NULL,");
+        sb.append("illness character varying(100) NOT NULL);");
         return sb.toString();
     }
 
